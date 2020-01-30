@@ -21,6 +21,6 @@ y_test = y.iloc[index:].values
 clf = NaiveBayesClassifier(5)
 clf = clf.fit(x_train, y_train)
 y_pred = clf.predict(x_test)
-acc = clf.accuracy_score(y_test, y_pred)
+accuracy = clf.accuracy_score(y_test, y_pred)
 
-print(acc)
+print('The accuracy is: {}'.format(accuracy))
