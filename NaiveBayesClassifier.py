@@ -56,7 +56,7 @@ class NaiveBayesClassifier:
                         y_pred[i, j] *= likelihoods[x_i[f_i]]
                 j += 1
             i += 1
-        return [np.argmax(y_pred[i]) for i in np.arange(x.shape[0])] 
+        return [np.argmax(y_pred[i]) for i in np.arange(x.shape[0])]
 
     def accuracy_score(self, y_true, y_pred):
         zipped = zip(y_true, y_pred)
