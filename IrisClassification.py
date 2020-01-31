@@ -1,6 +1,6 @@
 import pandas as pd
-from NaiveBayesClassifier import NaiveBayesClassifier
-from GaussianNaiveBayesClassifier import GaussianNaiveBayesClassifier
+from NaiveBayesClassifier import DiscreteNaiveBayesClassifier
+from NaiveBayesClassifier import GaussianNaiveBayesClassifier
 
 df = pd.read_csv('https://raw.githubusercontent.com/uiuc-cse/data-fa14/gh-pages/data/iris.csv')
 df = df.sample(frac=1)
@@ -20,10 +20,10 @@ y_train = y.iloc[:index].values
 y_test = y.iloc[index:].values
 
 '''
-clf = NaiveBayesClassifier(buckets_number=5)
-clf = clf.fit(x_train, y_train)
-y_pred = clf.predict(x_test)
-accuracy = clf.accuracy_score(y_test, y_pred)
+discrete_clf = DiscreteNaiveBayesClassifier(buckets_number=5)
+discrete_clf = discrete_clf.fit(x_train, y_train)
+y_pred = discrete_clf.predict(x_test)
+accuracy = discrete_clf.accuracy_score(y_test, y_pred)
 
 print('The accuracy is: {}'.format(accuracy))
 '''
