@@ -110,3 +110,6 @@ class GaussianNaiveBayesClassifier(NaiveBayesClassifier):
                 j += 1
             i += 1
         return [np.argmax(y_pred[i]) for i in np.arange(x.shape[0])]
+
+if __name__ == '__main__':
+    from IrisClassification import *
